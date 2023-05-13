@@ -1,5 +1,14 @@
 const grid = document.getElementById("grid");
-createGrid(30)
+function game(){
+let size = prompt("How many squares per side?")
+if (size > 100) {
+  alert("Can't do more than 100");
+  game();
+}else{
+createGrid(size)
+};
+}
+game();
 
 function createGrid(size){
     let squareSize = grid.offsetWidth / size;
